@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         User user = (User) session.getAttribute("user");
         Map<String, String> map = (Map<String, String>) sc.getAttribute("loginMap");
 
-
+        System.out.println("拦截器:");
         if (user != null && map != null) {
             if (map.get(user.getUsername()).equals(sessionId)) {
                 System.out.println("已登录");
